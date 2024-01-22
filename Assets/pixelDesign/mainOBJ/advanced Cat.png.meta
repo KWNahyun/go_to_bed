@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db238b2a166ee0c449729200f12dce5d
+guid: 427f7370cf583a9449b5b8e303a4613b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat1_0
+      name: advanced Cat_0
       rect:
         serializedVersion: 2
         x: 8
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfe2be91880a18b4a8dbe8e85c66a784
-      internalID: -1458734840
+      spriteID: 0749e9e4ae6abdd40b2385a0d2fb82ea
+      internalID: -1308797033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_1
+      name: advanced Cat_1
       rect:
         serializedVersion: 2
         x: 34
@@ -158,14 +158,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29c3175524634844895bf4e9840adca9
-      internalID: -1840011752
+      spriteID: e510c7e7f7ea7414c81b1ef226576361
+      internalID: -1864326985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_2
+      name: advanced Cat_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 44
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476e6fe4f3a0d384b89b9e9e81996859
+      internalID: 624936732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: advanced Cat_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 44
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253dd4802d761c342a14c0e1c4ec6930
+      internalID: -1323480130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: advanced Cat_4
       rect:
         serializedVersion: 2
         x: 8
@@ -179,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1bcc7a8d601caf4da332cd9b0f624a7
-      internalID: -1643751983
+      spriteID: 4ac969bc61f53cf48b37a69908c1c78b
+      internalID: 175271674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_3
+      name: advanced Cat_5
       rect:
         serializedVersion: 2
         x: 34
@@ -200,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a499742df4d6504dac7f8561c5f0c4c
-      internalID: -724790401
+      spriteID: ab4acb73462ccb54b80c335bba20d507
+      internalID: 520750522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_4
+      name: advanced Cat_6
       rect:
         serializedVersion: 2
         x: 8
@@ -221,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b96dcd021364f65418981d67fb7f03f3
-      internalID: -943852268
+      spriteID: 5171eefe69d460d458663819be103393
+      internalID: -1182321107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_5
+      name: advanced Cat_7
       rect:
         serializedVersion: 2
         x: 34
@@ -242,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 771774cf2beef304aa2cc9e16978774d
-      internalID: 380614037
+      spriteID: 891618e7802fc844eada5e35f9490098
+      internalID: 1327575129
       vertices: []
       indices: 
       edges: []
@@ -259,12 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cat1_0: -1458734840
-      Cat1_1: -1840011752
-      Cat1_2: -1643751983
-      Cat1_3: -724790401
-      Cat1_4: -943852268
-      Cat1_5: 380614037
+      advanced Cat_0: -1308797033
+      advanced Cat_1: -1864326985
+      advanced Cat_2: 624936732
+      advanced Cat_3: -1323480130
+      advanced Cat_4: 175271674
+      advanced Cat_5: 520750522
+      advanced Cat_6: -1182321107
+      advanced Cat_7: 1327575129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
