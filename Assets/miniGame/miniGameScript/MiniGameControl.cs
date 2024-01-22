@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MiniGameControl : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MiniGameControl : MonoBehaviour
     public float StartJumpPower;
     public float jumpPower;
     public bool isGround;
+    public UnityEvent onHit;
 
     //컴포넌트 불러오기 
     Rigidbody2D rigid;
@@ -26,15 +28,19 @@ public class MiniGameControl : MonoBehaviour
 
     void Update()
     {
-        // 기본점프 로직 
-        if (Input.GetButtonDown("Jump") && isGround)
+        if (GameManager.isLive)
         {
-            rigid.AddForce(Vector2.up * StartJumpPower, ForceMode2D.Impulse);
-        }
-        else if (Input.GetButton("Jump") && !isGround) // 롱 점프 
-        {
-            jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            // 기본점프 로직 
+            if (Input.GetButtonDown("Jump") && isGround)
+            {
+                rigid.AddForce(Vector2.up * StartJumpPower, ForceMode2D.Impulse);
+            }
+            else if (Input.GetButton("Jump") && !isGround) // 롱 점프 
+            {
+                jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
+                rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            }
+
         }
     }
 
@@ -59,13 +65,10 @@ public class MiniGameControl : MonoBehaviour
     {
         anim.SetBool("isDie", true);
         rigid.simulated = false;
+
+        onHit.Invoke();
     }
 
-    // 해야할 거 
-    // 1.점프 ( 숏 점프와 롱 점프 ) [0]
-    // 2.착지 [0]
-    // 3.장애물 히트 
-    // 4.애니메이션 설정 [ing]
-    // 5.사운드 작업 
+
 
 }
