@@ -17,6 +17,10 @@ public class Scroller : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(speedRate * -1f * Time.deltaTime, 0, 0);    
+        if (GameManager.isLive) // 살아움직일때만 배경 이동 
+        {
+            float totalSpeed = GameManager.GlobalSpeed * speedRate * Time.deltaTime;
+            transform.Translate(-totalSpeed, 0, 0);
+        }
     }
 }
