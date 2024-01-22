@@ -20,7 +20,7 @@ public class MiniGameControl : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        StartJumpPower = 5.0f;
+        StartJumpPower = 7.0f;
         jumpPower = 1.0f;
 
         anim.SetBool("isRun", true);
