@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 252938c6246bc2543b16bcf8a3e0d452
+guid: db238b2a166ee0c449729200f12dce5d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,74 +123,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minigameObj_0
+      name: Cat1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 37
-        width: 23
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7953bd9c46f9044b8b06d82f71084f9
-      internalID: -1544762925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minigameObj_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 45
-        width: 10
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35e75846a2e822c4d99675076f711b34
-      internalID: 145398882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minigameObj_2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 19
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9d419ce29887b34992bed6758147572
-      internalID: -2118770698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minigameObj_3
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 19
+        x: 8
+        y: 44
         width: 22
         height: 18
       alignment: 0
@@ -200,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1839a19a74e5a8c4f94c7a8bed7ac70c
-      internalID: 395987175
+      spriteID: bfe2be91880a18b4a8dbe8e85c66a784
+      internalID: -1458734840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minigameObj_4
+      name: Cat1_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 19
-        width: 14
-        height: 14
+        x: 34
+        y: 44
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +158,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 247cdf2f2bfaec545a891263eed1a3ab
-      internalID: -173238297
+      spriteID: 29c3175524634844895bf4e9840adca9
+      internalID: -1840011752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minigameObj_5
+      name: Cat1_2
       rect:
         serializedVersion: 2
-        x: 5
+        x: 8
+        y: 23
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bcc7a8d601caf4da332cd9b0f624a7
+      internalID: -1643751983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 23
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a499742df4d6504dac7f8561c5f0c4c
+      internalID: -724790401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_4
+      rect:
+        serializedVersion: 2
+        x: 8
         y: 2
-        width: 14
-        height: 15
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +221,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ead8a8af1b85332469105fb5622c3ac6
-      internalID: 943893487
+      spriteID: b96dcd021364f65418981d67fb7f03f3
+      internalID: -943852268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 2
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771774cf2beef304aa2cc9e16978774d
+      internalID: 380614037
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      minigameObj_0: -1544762925
-      minigameObj_1: 145398882
-      minigameObj_2: -2118770698
-      minigameObj_3: 395987175
-      minigameObj_4: -173238297
-      minigameObj_5: 943893487
+      Cat1_0: -1458734840
+      Cat1_1: -1840011752
+      Cat1_2: -1643751983
+      Cat1_3: -724790401
+      Cat1_4: -943852268
+      Cat1_5: 380614037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
