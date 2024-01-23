@@ -75,7 +75,7 @@ public class MiniGameControl : MonoBehaviour
             rigid.simulated = false;
             onHit.Invoke();
         }
-        else if(collision.tag == "item")
+        else if(collision.tag == "item") // µ∑¿ª ∏‘¿ª ∂ß 
         {
             GameManager.inGameMoney += 1;
             Debug.Log(GameManager.inGameMoney);
