@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static float GlobalSpeed;
     public static float score;
     public static bool isLive;
+    public static int inGameMoney;
     public GameObject uiOver;
 
     void Start()
