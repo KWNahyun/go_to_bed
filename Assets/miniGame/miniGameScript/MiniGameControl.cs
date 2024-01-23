@@ -20,7 +20,7 @@ public class MiniGameControl : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        StartJumpPower = 7.0f;
+        StartJumpPower = 9.0f;
         jumpPower = 1.0f;
 
         anim.SetBool("isRun", true);
@@ -31,11 +31,11 @@ public class MiniGameControl : MonoBehaviour
         if (GameManager.isLive)
         {
             // 기본점프 로직 
-            if (Input.GetButtonDown("Jump") && isGround)
+            if ( (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0) ) && isGround)
             {
                 rigid.AddForce(Vector2.up * StartJumpPower, ForceMode2D.Impulse);
             }
-            else if (Input.GetButton("Jump") && !isGround) // 롱 점프 
+            else if ( (Input.GetButton("Jump") || Input.GetMouseButton(0) ) && !isGround) // 롱 점프 
             {
                 jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -63,10 +63,20 @@ public class MiniGameControl : MonoBehaviour
     // 장애물 히트 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        anim.SetBool("isDie", true);
-        rigid.simulated = false;
+        if (collision.tag == "monster")
+        {
+            anim.SetBool("isDie", true);
+            rigid.simulated = false;
+            onHit.Invoke();
+        }
+        else if(collision.tag == "item")
+        {
+            GameManager.inGameMoney += 1;
+            Debug.Log(GameManager.inGameMoney);
 
-        onHit.Invoke();
+            collision.gameObject.SetActive(false);
+        }
+        
     }
 
 
