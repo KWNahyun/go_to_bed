@@ -4,7 +4,7 @@ using System.IO; // io namespace 무조건 사용해야함
 using UnityEngine;
 
 
-public class SaveSystem : MonoBehaviour
+public class SaveSystem
 {
 
     private static string SavePath => Application.persistentDataPath + "/saves/";
@@ -12,13 +12,7 @@ public class SaveSystem : MonoBehaviour
     // 데이터 Save 
     public static void Save(SaveData data , string FileName)
     {
-        // 데이터 존재여부 예외처리 
-        if (data == null)
-        {
-            Debug.Log("데이터가 존재하지 않습니다!");
-            return;
-        }
-
+  
         // 디렉토리 init경로 
         if (!Directory.Exists(SavePath))
         {
@@ -47,7 +41,7 @@ public class SaveSystem : MonoBehaviour
         }
 
         string saveFile = File.ReadAllText(saveFilePath); // 읽기 
-        SaveData saveData = JsonUtility.FromJson<SaveData>(saveFile); // Json to class
+        SaveData saveData = JsonUtility.FromJson<SaveData>(saveFile);
         return saveData;
 
     }
