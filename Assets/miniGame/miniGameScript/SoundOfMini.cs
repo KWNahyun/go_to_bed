@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SoundOfMini : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public enum Sfx { Jump, Land, Hit }
+    public AudioClip[] clips;
+    AudioSource audios;
+
     void Start()
     {
-        
+        audios = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void playSound(Sfx sfx)
     {
-        
+        audios.clip = clips[(int)sfx];
+        audios.Play();
     }
+
+
 }
