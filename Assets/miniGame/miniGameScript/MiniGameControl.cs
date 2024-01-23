@@ -31,11 +31,11 @@ public class MiniGameControl : MonoBehaviour
         if (GameManager.isLive)
         {
             // 기본점프 로직 
-            if (Input.GetButtonDown("Jump") && isGround)
+            if ( (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0) ) && isGround)
             {
                 rigid.AddForce(Vector2.up * StartJumpPower, ForceMode2D.Impulse);
             }
-            else if (Input.GetButton("Jump") && !isGround) // 롱 점프 
+            else if ( (Input.GetButton("Jump") || Input.GetMouseButton(0) ) && !isGround) // 롱 점프 
             {
                 jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
