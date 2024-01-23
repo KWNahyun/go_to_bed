@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void ReStart()
     {
+
         SceneManager.LoadScene("minigame");
 
         // 새로 시작할 때 static변수 초기화하기 

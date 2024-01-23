@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class MiniGameControl : MonoBehaviour
 {
-    public enum State { Idle, Run, Jump, Hit } 
     public float StartJumpPower;
     public float jumpPower;
     public bool isGround;
@@ -14,17 +13,21 @@ public class MiniGameControl : MonoBehaviour
     //컴포넌트 불러오기 
     Rigidbody2D rigid;
     Animator anim;
+    SoundOfMini sound; // 같은 오브젝트면 이게 가능함  
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<SoundOfMini>();
 
         StartJumpPower = 9.0f;
         jumpPower = 1.0f;
 
+
         anim.SetBool("isRun", true);
     }
+
 
     void Update()
     {
@@ -50,12 +53,14 @@ public class MiniGameControl : MonoBehaviour
     {
         isGround = true;
         jumpPower = 1.0f;
+        sound.playSound(SoundOfMini.Sfx.Land);
         anim.SetBool("isJump", false);
     }
 
     // 다시 점프 할 때 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        sound.playSound(SoundOfMini.Sfx.Jump);
         anim.SetBool("isJump", true);
         isGround = false;
     }
@@ -65,6 +70,7 @@ public class MiniGameControl : MonoBehaviour
     {
         if (collision.tag == "monster")
         {
+            sound.playSound(SoundOfMini.Sfx.Hit);
             anim.SetBool("isDie", true);
             rigid.simulated = false;
             onHit.Invoke();
