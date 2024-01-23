@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isLive = true;
+        uiOver.SetActive(false);
+
+        if (!PlayerPrefs.HasKey("Score"))
+        {
+            PlayerPrefs.SetFloat("Score", 0);
+        }
     }
 
     // Update is called once per frame
@@ -30,8 +37,27 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //uiOver.SetActive(true);
+        uiOver.SetActive(true);
         isLive = false;
+
+        float highScore = PlayerPrefs.GetFloat("Score");
+        PlayerPrefs.SetFloat("Score", Mathf.Max(highScore, score));
+    }
+
+    public void ReStart()
+    {
+        SceneManager.LoadScene("minigame");
+
+        // 새로 시작할 때 static변수 초기화하기 
+        score = 0;
+        isLive = true;
+        inGameMoney = 0;
+
+    }
+
+    public void ToLobby()
+    {
+        SceneManager.LoadScene("main");
     }
 
 }
