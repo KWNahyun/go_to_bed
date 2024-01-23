@@ -56,6 +56,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void toHome()
+    {
+        SceneManager.LoadScene("main");
+    }
 
 
 }
