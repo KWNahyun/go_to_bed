@@ -56,9 +56,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ToLobby()
-    {
-        SceneManager.LoadScene("main");
-    }
+
 
 }
