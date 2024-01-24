@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
     public static bool isLive;
     public static int inGameMoney;
     public GameObject uiOver;
+    
 
     void Start()
     {
+        
+
         isLive = true;
         uiOver.SetActive(false);
 
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
     public void ReStart()
     {
 
+
         SceneManager.LoadScene("minigame");
 
         // 새로 시작할 때 static변수 초기화하기 
@@ -58,6 +62,8 @@ public class GameManager : MonoBehaviour
 
     public void toHome()
     {
+
+        GameObject.Find("StatControler").GetComponent<moneyControler>().UpdateStatPoint();
         SceneManager.LoadScene("main");
     }
 
