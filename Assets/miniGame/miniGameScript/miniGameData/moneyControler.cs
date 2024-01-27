@@ -14,14 +14,14 @@ public class moneyControler : MonoBehaviour
     private static float plusXp = GameManager.score * 0.1f;
 
 
-    public void UpdateStatPoint() // 인게임 재화 업데이트 
+    public void UpdateStatPoint() // 인게임 STAT(재화) 업데이트 
     {
         // 기존 재화 불러오기 ( LOAD ) 
         SaveData Data = SaveSystem.Load("StatDB");
 
         // 게임 재화 연산 ( 일단 돈만 )
-        Data.money += GameManager.inGameMoney;
-        Debug.Log(Data.money);  
+        Data.money += GameManager.inGameMoney; 
+        Debug.Log(Data.money); 
 
         // JSON DB에 재화 반영 ( SAVE )
         SaveSystem.Save(Data, "StatDB");
