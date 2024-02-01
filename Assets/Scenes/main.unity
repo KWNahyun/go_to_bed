@@ -4358,11 +4358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7297819278184886940, guid: a585960aa11bebc46b1e9e49559dfa40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 7297819278184886940, guid: a585960aa11bebc46b1e9e49559dfa40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.11
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 7297819278184886940, guid: a585960aa11bebc46b1e9e49559dfa40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4459,7 +4459,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_delay: 0
   move_time: 0
-  xpSlider: {fileID: 0}
+  xpSlider: {fileID: 1358487796}
+  hpSlider: {fileID: 1250795220}
+  happyPointSlider: {fileID: 1206134426}
   audioPop: {fileID: 8300000, guid: 9d0113dd16699ce4ea3c58dd422fdc1f, type: 3}
 --- !u!70 &1903373305
 CapsuleCollider2D:

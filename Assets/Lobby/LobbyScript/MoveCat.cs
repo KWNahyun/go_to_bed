@@ -16,10 +16,10 @@ public class MoveCat : MonoBehaviour
     SpriteRenderer sprite;
     Animator anim;
 
-    [SerializeField]
-    private Slider xpSlider;
-    private Slider hpSlider;
-    private Slider happyPointSlider;
+
+    [SerializeField] private Slider xpSlider;
+    [SerializeField] private Slider hpSlider;
+    [SerializeField] private Slider happyPointSlider;
 
     //사운드 모듈
     public AudioClip audioPop;
@@ -102,6 +102,23 @@ public class MoveCat : MonoBehaviour
         anim.SetTrigger("doTouch");
 
         audioSource.PlayOneShot(audioSource.clip);
+    }
+
+    private void UpdateStatData()
+    {
+        // DataLoad 
+
+
+
+        // happyPoint증가 
+
+
+        // hp증가 
+
+
+        // xp증가
+         
+
     }
 
 

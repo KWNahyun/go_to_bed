@@ -32,12 +32,14 @@ public class moneyControler : MonoBehaviour
             }
         }
 
+        // happyPoint
         Data.happypoint -= minusHappyPoint;
         if (Data.happypoint < 0)
         {
             Data.happypoint = 0;
         }
 
+        // xp
         Data.xp += GameManager.score * 50f;
 
         // JSON DB에 재화 반영 ( SAVE )
