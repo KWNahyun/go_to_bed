@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour
     public static int inGameMoney;
     public GameObject uiOver;
     
+    public AudioClip audioPop;
+    AudioSource audioSource;
+
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -50,7 +58,7 @@ public class GameManager : MonoBehaviour
     public void ReStart()
     {
 
-
+        audioSource.PlayOneShot(audioSource.clip);
         SceneManager.LoadScene("minigame");
 
         // 새로 시작할 때 static변수 초기화하기 
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void toHome()
     {
-
+        audioSource.PlayOneShot(audioSource.clip);
         GameObject.Find("StatControler").GetComponent<moneyControler>().UpdateStatPoint();
         SceneManager.LoadScene("main");
     }
