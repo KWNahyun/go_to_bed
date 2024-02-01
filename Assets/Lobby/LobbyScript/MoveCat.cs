@@ -48,12 +48,12 @@ public class MoveCat : MonoBehaviour
 
     IEnumerator Wander()
     {
-        move_delay = 6;
+        move_delay = 2;
         move_time = 3;
 
         // Translate로 이동할 시 Object가 텔레포트 하는 것을 방지하기 위해 Time.deltaTime을 곱해줌
-        speed_x = Random.Range(-0.8f, 0.8f) * Time.deltaTime;
-        speed_y = Random.Range(-0.8f, 0.8f) * Time.deltaTime;
+        speed_x = Random.Range(-1.8f, 1.8f) * Time.deltaTime;
+        speed_y = Random.Range(-1.8f, 1.8f) * Time.deltaTime;
 
         isWandering = true;
 
@@ -71,6 +71,19 @@ public class MoveCat : MonoBehaviour
         isWandering = false;
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Down") || collision.gameObject.name.Contains("Up"))
+        {
+            speed_y = -speed_y;
+        }
+        else if (collision.gameObject.name.Contains("Left") || collision.gameObject.name.Contains("Right"))
+        {
+            speed_x = -speed_x;
+        }
+            
+    }
 
 
 }
