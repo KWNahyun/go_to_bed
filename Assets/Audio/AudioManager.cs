@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip coin;
     public AudioClip click;
+    public AudioClip jump;
+    public AudioClip land;
+    public AudioClip hit;
 
     private void Start()
     {
