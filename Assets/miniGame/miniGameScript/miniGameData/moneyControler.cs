@@ -9,19 +9,36 @@ public class moneyControler : MonoBehaviour
 {
     
     // 미니게임 결과물 
-    private static float minusHp = GameManager.score * 0.1f; // 일단 임시로 변수만든거 
     private static float minusHappyPoint = 20.0f;
-    private static float plusXp = GameManager.score * 0.1f;
-
 
     public void UpdateStatPoint() // 인게임 STAT(재화) 업데이트 
     {
         // 기존 재화 불러오기 ( LOAD ) 
         SaveData Data = SaveSystem.Load("StatDB");
 
-        // 게임 재화 연산 ( 일단 돈만 )
+        // 게임 재화 연산 
+        // money 
         Data.money += GameManager.inGameMoney; 
-        Debug.Log(Data.money); 
+        Debug.Log(Data.money);
+
+        //hp
+        Data.hp -= GameManager.score * 0.1f;
+        if (Data.hp < 0)
+        {
+            Data.hp = 0;
+            if (Data.hp <= 30)
+            {
+                Data.happypoint = 10;
+            }
+        }
+
+        Data.happypoint -= minusHappyPoint;
+        if (Data.happypoint < 0)
+        {
+            Data.happypoint = 0;
+        }
+
+        Data.xp += GameManager.score * 50f;
 
         // JSON DB에 재화 반영 ( SAVE )
         SaveSystem.Save(Data, "StatDB");
