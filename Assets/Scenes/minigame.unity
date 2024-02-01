@@ -5965,6 +5965,9 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 87890a66193394e3cb7d6284cc6b4344, type: 3}
   coin: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
   click: {fileID: 8300000, guid: 9d0113dd16699ce4ea3c58dd422fdc1f, type: 3}
+  jump: {fileID: 8300000, guid: 6e889456b7d33474785afbf1d7b46659, type: 3}
+  land: {fileID: 8300000, guid: f2bfbc2b73d634a4b8bc3c664921695b, type: 3}
+  hit: {fileID: 8300000, guid: 1257d9fccdb4a004dbb86d4a216a8fd8, type: 3}
 --- !u!4 &1967453381
 Transform:
   m_ObjectHideFlags: 0
@@ -6833,7 +6836,7 @@ AudioSource:
   m_GameObject: {fileID: 26007161504119083}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4618844026047056306, guid: d5962bcf4015add49a2f36ddd68b6bbe, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
