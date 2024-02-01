@@ -12,10 +12,8 @@ public class LoadXp : MonoBehaviour
     {
         // Load Json Data
         SaveData Data = SaveSystem.Load("StatDB");
-
-
-
         xpSlider.value = Data.xp;
+
 
     }
 }

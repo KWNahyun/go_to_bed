@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveCat : MonoBehaviour
 {
@@ -10,17 +11,26 @@ public class MoveCat : MonoBehaviour
     float speed_x;	// x축 방향 이동 속도
     float speed_y;	// y축 방향 이동 속도
     bool isWandering;
-    bool isWalking;
+    public static bool isWalking;
 
     SpriteRenderer sprite;
     Animator anim;
 
+    [SerializeField]
+    private Slider xpSlider;
+    private Slider hpSlider;
+    private Slider happyPointSlider;
+
+    //사운드 모듈
+    public AudioClip audioPop;
+    AudioSource audioSource;
 
     void Awake()
     {
         Time.timeScale = 1; // 미니게임에서 강제 종료했을때 모든 코드가 멈춰 버리는 문제해결 
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         isWandering = false;
         isWalking = false;
@@ -84,6 +94,16 @@ public class MoveCat : MonoBehaviour
         }
             
     }
+
+    private void OnMouseDown()
+    {
+        isWalking = false;
+        anim.SetBool("isWalk", false);
+        anim.SetTrigger("doTouch");
+
+        audioSource.PlayOneShot(audioSource.clip);
+    }
+
 
 
 }
