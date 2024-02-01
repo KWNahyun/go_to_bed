@@ -8,5 +8,6 @@ public class closePanel : MonoBehaviour
    public void closePause()
     {
         panel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

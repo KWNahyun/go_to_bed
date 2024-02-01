@@ -11,6 +11,7 @@ public class openPanel : MonoBehaviour
     public void openPause()
     {
         panel.SetActive(true);
+        Time.timeScale = 0;
     }
 
 }
