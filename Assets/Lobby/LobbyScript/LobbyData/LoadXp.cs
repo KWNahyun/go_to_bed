@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadHappyPoint : MonoBehaviour
+public class LoadXp : MonoBehaviour
 {
     [SerializeField]
-    private Slider happySlider;
+    private Slider XpSlider;
 
     private void Start()
     {
         // Load Json Data
         SaveData Data = SaveSystem.Load("StatDB");
-        
 
-        happySlider.value = Data.happypoint;
+
+        XpSlider.value = Data.xp;
 
     }
+
+
 }
