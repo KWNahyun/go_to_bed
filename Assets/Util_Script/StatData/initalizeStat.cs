@@ -17,4 +17,22 @@ public class initalizeStat : MonoBehaviour
             SaveSystem.Save(stat, "StatDB");
         }
     }
+
+
+    public void InitDataFile()
+    {
+        SaveData Data = SaveSystem.Load("StatDB");
+        if (Data == null)
+        {
+            Debug.Log("StatDB를 초기화 했습니다");
+            SaveData stat = new SaveData("팀장은권나현", 0.0f, 50, 100.0f, 100.0f);
+
+            SaveSystem.Save(stat, "StatDB");
+        }
+    }
+
+
+
+
+
 }
