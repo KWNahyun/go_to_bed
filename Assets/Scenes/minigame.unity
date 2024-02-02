@@ -6450,7 +6450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2112171667}
   sfxSource: {fileID: 1533405712}
-  background: {fileID: 8300000, guid: 87890a66193394e3cb7d6284cc6b4344, type: 3}
+  background: {fileID: 8300000, guid: b7da48c15e710a741842583fac3307c7, type: 3}
   coin: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
   click: {fileID: 8300000, guid: 9d0113dd16699ce4ea3c58dd422fdc1f, type: 3}
   jump: {fileID: 8300000, guid: 6e889456b7d33474785afbf1d7b46659, type: 3}
@@ -7088,7 +7088,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
