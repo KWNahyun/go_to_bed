@@ -13,12 +13,12 @@ public class MoveCat : MonoBehaviour
     float speed_y;	// y축 방향 이동 속도
     bool isWandering;
     public static bool isWalking;
+    public static bool isSleeping;
 
     int BotheredStack = 0; // 피곤 스택
 
     SpriteRenderer sprite;
     Animator anim;
-
 
     [SerializeField] private Slider xpSlider;
     [SerializeField] private Slider hpSlider;
@@ -42,11 +42,25 @@ public class MoveCat : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isWandering)
-            StartCoroutine(Wander());	// 코루틴 실행
-        
-        if (isWalking)
-            Move();
+        if (!isSleeping)
+        {
+            anim.SetBool("isSleep", false); // 일어난 모드 
+            if (!isWandering)
+                StartCoroutine(Wander());   // 코루틴 실행
+
+            if (isWalking)
+                Move();
+        }
+        else //  자고 있을때 
+        {
+            speed_x = 0;
+            speed_y = 0;
+            anim.SetBool("isSleep", true); // 자는 모드 
+
+
+        }
+
+
     }
 
 
