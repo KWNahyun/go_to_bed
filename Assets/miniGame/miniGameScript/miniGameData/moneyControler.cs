@@ -23,21 +23,9 @@ public class moneyControler : MonoBehaviour
 
         //hp
         Data.hp -= GameManager.score * 0.1f;
-        if (Data.hp < 0)
-        {
-            Data.hp = 0;
-            if (Data.hp <= 30)
-            {
-                Data.happypoint = 10;
-            }
-        }
 
         // happyPoint
         Data.happypoint -= minusHappyPoint;
-        if (Data.happypoint < 0)
-        {
-            Data.happypoint = 0;
-        }
 
         // xp
         Data.xp += GameManager.score * 50f;

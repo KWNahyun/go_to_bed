@@ -21,6 +21,8 @@ public class LoadHp : MonoBehaviour
             Data.hp = 0;
         }
 
+        SaveSystem.Save(Data, "StatDB");
+
         hpSlider.value = Data.hp;
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MoveCat : MonoBehaviour
 {
     public int move_delay;	// 다음 이동까지의 딜레이 시간
@@ -12,6 +13,8 @@ public class MoveCat : MonoBehaviour
     float speed_y;	// y축 방향 이동 속도
     bool isWandering;
     public static bool isWalking;
+
+    int BotheredStack = 0; // 피곤 스택
 
     SpriteRenderer sprite;
     Animator anim;
@@ -102,23 +105,70 @@ public class MoveCat : MonoBehaviour
         anim.SetTrigger("doTouch");
 
         audioSource.PlayOneShot(audioSource.clip);
+        UpdateStatData();
+
     }
 
     private void UpdateStatData()
     {
+        
+        
         // DataLoad 
-
-
+        SaveData Data = SaveSystem.Load("StatDB");
 
         // happyPoint증가 
+        if(Data.happypoint >= 100)
+        {
+            Data.happypoint = 100;
+            BotheredStack++;
+        }
+        else
+        {
+            Data.happypoint += 1.0f;
+        }
+       
+        bool isTired = isOverHappyPoint(BotheredStack);
+        if (isTired)
+        {
+            Data.hp -= 30.0f;
+            Data.happypoint -= 20.0f;
+            if(Data.hp <  0 ) Data.hp = 0;
 
+            BotheredStack = 0;
+        }
 
-        // hp증가 
+        // xp증가 
+        if(Data.hp <= 10)
+        {
+            Data.xp += 0.1f;
+        }
+        else
+        {
+            Data.xp += 50.0f;
+        }
 
+        // UI에 상태 반영 
+        xpSlider.value = Data.xp;
+        hpSlider.value = Data.hp;
+        happyPointSlider.value = Data.happypoint;
 
-        // xp증가
-         
+        // Stat반영 콘솔 출력 
+        Debug.Log(Data.hp + " , " + Data.xp + " , " + Data.happypoint);
+        Debug.Log(BotheredStack);
+        // stat 반영
+        SaveSystem.Save(Data, "StatDB");
 
+    }
+
+    private bool isOverHappyPoint(int bothered) 
+    {
+        bool isTired = false;
+        if(bothered >= 100.0f)
+        {
+            isTired = true;
+        }
+
+        return isTired;
     }
 
 
