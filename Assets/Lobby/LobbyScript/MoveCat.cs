@@ -57,7 +57,14 @@ public class MoveCat : MonoBehaviour
             speed_y = 0;
             anim.SetBool("isSleep", true); // 자는 모드 
 
-
+            SaveData Data = SaveSystem.Load("StatDB");
+            Data.hp += 0.1f * Time.deltaTime;
+            if (Data.hp > 100)
+            {
+                Data.hp = 100;
+            }
+            hpSlider.value = Data.hp;
+            SaveSystem.Save(Data, "StatDB");
         }
 
 
