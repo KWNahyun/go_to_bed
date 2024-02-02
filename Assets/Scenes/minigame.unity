@@ -3102,7 +3102,6 @@ GameObject:
   - component: {fileID: 934204076}
   - component: {fileID: 934204075}
   - component: {fileID: 934204078}
-  - component: {fileID: 934204080}
   - component: {fileID: 934204079}
   m_Layer: 5
   m_Name: Button
@@ -3333,14 +3332,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &934204080
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934204072}
-  m_Enabled: 1
 --- !u!1 &934536018
 GameObject:
   m_ObjectHideFlags: 0
@@ -4159,7 +4150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1208458095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5028,7 +5019,6 @@ GameObject:
   - component: {fileID: 1418706440}
   - component: {fileID: 1418706439}
   - component: {fileID: 1418706438}
-  - component: {fileID: 1418706443}
   - component: {fileID: 1418706442}
   m_Layer: 5
   m_Name: homeButton
@@ -5260,14 +5250,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &1418706443
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418706436}
-  m_Enabled: 1
 --- !u!1 &1430463004
 GameObject:
   m_ObjectHideFlags: 0

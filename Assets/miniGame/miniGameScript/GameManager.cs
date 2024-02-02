@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
         isLive = true;
         uiOver.SetActive(false);
 
+    }
+
+    private void OnEnable()
+    {
         if (!PlayerPrefs.HasKey("Score"))
         {
             PlayerPrefs.SetFloat("Score", 0);
@@ -59,12 +63,13 @@ public class GameManager : MonoBehaviour
     {
 
         audioSource.PlayOneShot(audioSource.clip);
-        SceneManager.LoadScene("minigame");
-
         // 새로 시작할 때 static변수 초기화하기 
         score = 0;
         isLive = true;
         inGameMoney = 0;
+        SceneManager.LoadScene("minigame");
+
+        
 
     }
 
@@ -72,6 +77,10 @@ public class GameManager : MonoBehaviour
     {
         audioSource.PlayOneShot(audioSource.clip);
         GameObject.Find("StatControler").GetComponent<moneyControler>().UpdateStatPoint();
+        // 새로 시작할 때 static변수 초기화하기 
+        score = 0;
+        isLive = true;
+        inGameMoney = 0;
         SceneManager.LoadScene("main");
     }
 
