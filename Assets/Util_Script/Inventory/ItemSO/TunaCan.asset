@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92a38c5b838dabe4f8017106b44525df, type: 3}
-  m_Name: WaterBottle
+  m_Name: TunaCan
   m_EditorClassIdentifier: 
   id: 1
-  itemName: "\uBB3C\uBCD1"
-  itemIcon: {fileID: 1942477765, guid: 1fc9957b495f77841b9ccfb2f6ec849a, type: 3}
+  itemName: "\uCC38\uCE58\uCE94"
+  itemIcon: {fileID: 600162943, guid: b6fdd3fa27399784d939da37d910160d, type: 3}

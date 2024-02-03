@@ -9,8 +9,8 @@ public class CSVManager : MonoBehaviour
 {
     public string fileName = "ItemSave.csv";
 
-    public InputField itemIDText;
-    public InputField itemCountText;
+    public string itemIDText;
+    public string itemCountText;
 
     List<string[]> data = new List<string[]>();
     string[] tempData;
@@ -28,8 +28,8 @@ public class CSVManager : MonoBehaviour
     public void SaveCSVFile()
     {
         tempData = new string[2];
-        tempData[0] = itemIDText.text;
-        tempData[1] = itemCountText.text;
+        tempData[0] = itemIDText;
+        tempData[1] = itemCountText;
         data.Add(tempData);
 
         string[][] output = new string[data.Count][];
