@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    public Item item;
-    public int itemCount;
+    public Item Item;
 }
